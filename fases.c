@@ -25,12 +25,6 @@ Fase *criar_fases_encadeadas(int total) {
 
         novo->numero = i;
         novo->vida_max = i;
-        if (novo->vida_max > 10) {
-            novo->vida_max = 10;
-        }
-        if (novo->vida_max < 1) {
-            novo->vida_max = 1;
-        }
         novo->vida = novo->vida_max;
         novo->next = NULL;
 
@@ -42,7 +36,6 @@ Fase *criar_fases_encadeadas(int total) {
             atual = novo;
         }
     }
-
     return head;
 }
 
@@ -61,12 +54,8 @@ void reiniciar_fases(void) {
     }
 
     fase_atual = fase_head;
-    prompt_continuar_fase = 0;
     prompt_fugir_ou_n = 0;
-    prompt_pos_vitoria = 0;
     venceu_todas = 0;
-    auto_nova_rodada = 0;
-    auto_ready_time = 0.0;
     rodada_travada = 0.0;
 }
 
