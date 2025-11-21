@@ -7,6 +7,10 @@
 Texture2D texturas_final[6];
 int final_loaded = 0;
 
+Texture2D textura_game_over_tente;
+Texture2D textura_game_over_desisti;
+int game_over_loaded = 0;
+
 void load_final(void) {
     if (final_loaded == 1) {
         return;
@@ -35,6 +39,28 @@ void unload_final(void) {
         }
     }
     final_loaded = 0;
+}
+
+void load_game_over(void) {
+    if (game_over_loaded == 1) {
+        return;
+    }
+    textura_game_over_tente = LoadTexture("assets/tentenovamente.png");
+    textura_game_over_desisti = LoadTexture("assets/desisti.png");
+
+    if (textura_game_over_tente.id != 0 && textura_game_over_desisti.id != 0) {
+        game_over_loaded = 1;
+    } else {
+        game_over_loaded = 0;
+    }
+}
+
+void unload_game_over(void) {
+    if (game_over_loaded == 1) {
+        if (textura_game_over_tente.id != 0) UnloadTexture(textura_game_over_tente);
+        if (textura_game_over_desisti.id != 0) UnloadTexture(textura_game_over_desisti);
+    }
+    game_over_loaded = 0;
 }
 
 void load_bolsa(void) {
@@ -690,6 +716,7 @@ void load_tudo(void) {
     load_empate();
     load_trinkets_inventario();
     load_final();
+    load_game_over();
     load_todas_cartas();
 }
 
@@ -709,5 +736,6 @@ void unload_tudo(void) {
     unload_empate();
     unload_trinkets_inventario();
     unload_final();
+    unload_game_over();
     unload_todas_cartas();
 }
