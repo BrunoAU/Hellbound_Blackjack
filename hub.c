@@ -175,7 +175,6 @@ void TelaHub(Personagem personagem) {
     }
 
     if (foiParaBatalha == 0) {
-        load_coracoes();
         UnloadTexture(background);
         UnloadTexture(PocoHover);
         UnloadTexture(LojaHover);
@@ -186,6 +185,5 @@ void TelaHub(Personagem personagem) {
         UnloadTexture(IconMaga);
 
         ShowCursor();
-        unloadCursor();
     }
 }
