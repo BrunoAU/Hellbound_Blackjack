@@ -282,7 +282,10 @@ void start_battle(void) {
 
     if (player_blackjack == 1 && dealer_blackjack == 1) {
         empate("Empate: Blackjacks");
-        registrar_resultado_batalha(3);
+        if (historico_batalha_salvo == 0) {
+            registrar_resultado_batalha(3);
+            historico_batalha_salvo = 1;
+        }
         return;
     }
     if (player_blackjack == 1 && dealer_blackjack == 0) {
@@ -293,12 +296,18 @@ void start_battle(void) {
             recompensa_aplicada = 1;
         }
 
-        registrar_resultado_batalha(1);
+        if (historico_batalha_salvo == 0) {
+            registrar_resultado_batalha(1);
+            historico_batalha_salvo = 1;
+        }
         return;
     }
     if (player_blackjack == 0 && dealer_blackjack == 1) {
         dealer_ganhou("Dealer venceu: Blackjack");
-        registrar_resultado_batalha(0);
+        if (historico_batalha_salvo == 0) {
+            registrar_resultado_batalha(0);
+            historico_batalha_salvo = 1;
+        }
         return;
     }
 
