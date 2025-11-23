@@ -179,3 +179,4 @@ int max_dinheiro_gasto_run = 0;
 int max_dinheiro_gasto_ultima_run = 0;
 int max_dinheiro_gasto_atual = 0;
 int max_dinheiro_gasto_salvo = 0;
+int historico_batalha_salvo = 0;
