@@ -234,6 +234,7 @@ void comparacao_final(void) {
     resultado_aplicado = 1;
     espera_menu_fugir = GetTime() + 0.3;
     fugir_ou_n = 1;
+    menu_fuga_iniciado = 1;
     opcao_pos_vitoria = 0;
     fugido = 0;
 }
