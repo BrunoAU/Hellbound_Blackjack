@@ -163,11 +163,17 @@ void TelaPoco(Personagem *personagem) {
         }
 
         if (IsKeyPressed(KEY_DOWN) == 1 || IsKeyPressed(KEY_S) == 1) {
-            opcao = (opcao + 1) % 2;
+            opcao++;
+            if (opcao > 1) {
+                opcao = 0;
+            }
         }
 
         if (IsKeyPressed(KEY_UP) == 1 || IsKeyPressed(KEY_W) == 1) {
-            opcao = (opcao + 1) % 2;
+            opcao--;
+            if (opcao < 0) {
+                opcao = 1;
+            }
         }
 
         if (IsKeyPressed(KEY_ESCAPE) == 1) {
