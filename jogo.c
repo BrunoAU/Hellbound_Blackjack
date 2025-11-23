@@ -278,19 +278,9 @@ void start_battle(void) {
     puxar_para_mao(&dealer_hand);
 
     player_blackjack = first_hand_blackjack(&player_hand);
-    dealer_blackjack = first_hand_blackjack(&dealer_hand);
 
-    if (player_blackjack == 1 && dealer_blackjack == 1) {
-        empate("Empate: Blackjacks");
-        if (historico_batalha_salvo == 0) {
-            registrar_resultado_batalha(3);
-            historico_batalha_salvo = 1;
-        }
-        return;
-    }
-    if (player_blackjack == 1 && dealer_blackjack == 0) {
+    if (player_blackjack == 1) {
         player_ganhou("Você venceu: Blackjack");
-
         if (recompensa_aplicada == 0) {
             dinheiro_total = dinheiro_total + 5;
             recompensa_aplicada = 1;
@@ -298,14 +288,6 @@ void start_battle(void) {
 
         if (historico_batalha_salvo == 0) {
             registrar_resultado_batalha(1);
-            historico_batalha_salvo = 1;
-        }
-        return;
-    }
-    if (player_blackjack == 0 && dealer_blackjack == 1) {
-        dealer_ganhou("Dealer venceu: Blackjack");
-        if (historico_batalha_salvo == 0) {
-            registrar_resultado_batalha(0);
             historico_batalha_salvo = 1;
         }
         return;
