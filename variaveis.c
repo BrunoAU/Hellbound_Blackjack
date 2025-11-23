@@ -162,7 +162,6 @@ int vitoria21_loaded = 0;
 float escala_vitoria21 = 0.5f;
 
 int opcao_pos_vitoria = 0;
-int menu_fuga_iniciado = 0;
 int fugido = 0;
 double espera_menu_fugir = 0.0;
 
