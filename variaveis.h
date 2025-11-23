@@ -166,7 +166,6 @@ extern int vitoria21_loaded;
 extern float escala_vitoria21;
 
 extern int opcao_pos_vitoria;
-extern int menu_fuga_iniciado;
 extern int fugido;
 extern double espera_menu_fugir;
 
