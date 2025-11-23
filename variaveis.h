@@ -183,5 +183,6 @@ extern int max_dinheiro_gasto_run;
 extern int max_dinheiro_gasto_ultima_run;
 extern int max_dinheiro_gasto_atual;
 extern int max_dinheiro_gasto_salvo;
+extern int historico_batalha_salvo;
 
 #endif
