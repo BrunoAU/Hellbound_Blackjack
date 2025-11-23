@@ -69,10 +69,6 @@ int topo = 0;
 Hand player_hand;
 Hand dealer_hand;
 
-int estado_atual = 0;
-int estado_player = 1;
-int estado_dealer = 2;
-int estado_resultado = 3;
 char resultado_msg[256];
 int last_win = 0;
 
@@ -108,10 +104,14 @@ Texture2D textura_inventario;
 int inventario_loaded = 0;
 float inventario_escala = 0.5f;
 
+int game_state = 0;
 int estado_parado = 0;
+int estado_player = 1;
+int estado_dealer = 2;
+int estado_resultado = 3;
+int estado_atual = 0;
 int estado_batalha = 1;
 int estado_mapa = 2;
-int game_state = 0;
 
 int fugir_ou_n = 0;
 
@@ -162,6 +162,7 @@ int vitoria21_loaded = 0;
 float escala_vitoria21 = 0.5f;
 
 int opcao_pos_vitoria = 0;
+int menu_fuga_iniciado = 0;
 int fugido = 0;
 double espera_menu_fugir = 0.0;
 
