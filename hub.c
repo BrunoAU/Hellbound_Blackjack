@@ -10,14 +10,11 @@
 #include "loja.h"
 #include "poco.h"
 
-float heartScale = 0.35f;
-int heartSpacing = 40;
-
 void TelaHub(Personagem personagem) {
     SetWindowTitle("Hellbound Blackjack - HUB");
     SetTargetFPS(60);
 
-    load_tudo();
+    load_coracoes();
     Texture2D background = LoadTexture("assets/BACKGROUND.png");
     Texture2D PocoHover = LoadTexture("assets/poco_background.png");
     Texture2D LojaHover = LoadTexture("assets/loja_background.png");
@@ -33,8 +30,8 @@ void TelaHub(Personagem personagem) {
     bool foiParaBatalha = false;
     
     while (WindowShouldClose() == 0) {
-        float TelaLargura = (float)GetScreenWidth();
-        float TelaAltura = (float)GetScreenHeight();
+        float TelaLargura = GetScreenWidth();
+        float TelaAltura = GetScreenHeight();
         float ratioX = TelaLargura / 1920.0f;
         float ratioY = TelaAltura / 1080.0f;
         Rectangle hitboxPoco;
@@ -79,8 +76,6 @@ void TelaHub(Personagem personagem) {
                 UnloadTexture(IconGuerreiro);
                 UnloadTexture(IconArqueiro);
                 UnloadTexture(IconMaga);
-                
-                unloadCursor();
                 
                 foiParaBatalha = true;
                 TelaBatalha(personagem);
@@ -180,7 +175,7 @@ void TelaHub(Personagem personagem) {
     }
 
     if (foiParaBatalha == 0) {
-        unload_tudo();
+        load_coracoes();
         UnloadTexture(background);
         UnloadTexture(PocoHover);
         UnloadTexture(LojaHover);
