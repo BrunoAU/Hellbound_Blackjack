@@ -46,10 +46,6 @@ void desenhar_frame_final(int indice_frame) {
     origem.y = 0.0f;
 
     DrawTexturePro(texturas_final[indice_frame], original, destino, origem, 0.0f, WHITE);
-
-    if (indice_frame == 5) {
-        DrawText("Pressione ESC para sair", 20, 1040, 20, RAYWHITE);
-    }
 }
 
 void desenhar_tela_game_over(int opcao) {
