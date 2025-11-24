@@ -221,7 +221,7 @@ void TelaPoco(Personagem *personagem) {
         int fontSizeMsg;
         int fontSizeDinheiro;
         posX = (int)(60.0f * ratioX);
-        posY = (int)(700.0f * ratioY);
+        posY = (int)(670.0f * ratioY);
         fontSizeMsg = (int)(25.0f * ratioX);
         fontSizeDinheiro = (int)(30.0f * ratioX);
 
