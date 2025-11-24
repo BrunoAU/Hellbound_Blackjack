@@ -144,22 +144,18 @@ void comprar_itens(Personagem *p, int itemID) {
         comprar_coracao(p);
         return;
     }
-
     if (itemID == mais2) {
         comprar_trinket_mais2();
         return;
     }
-
     if (itemID == menos2) {
         comprar_trinket_menos2();
         return;
     }
-
     if (itemID == mais4) {
         comprar_trinket_mais4();
         return;
     }
-
     if (itemID == menos4) {
         comprar_trinket_menos4();
         return;
@@ -380,14 +376,20 @@ void TelaLoja(Personagem *personagem) {
         }
 
         confirmar_mouse = hitboxes_opcao_loja(&menuOpcao);
-
         if (estado == estadoMenu) {
             if (IsKeyPressed(KEY_DOWN) == 1 || IsKeyPressed(KEY_S) == 1) {
-                menuOpcao = (menuOpcao + 1) % 3;
+                menuOpcao++;
+                if (menuOpcao > 2) {
+                    menuOpcao = 0;
+                }
             }
 
             if (IsKeyPressed(KEY_UP) == 1 || IsKeyPressed(KEY_W) == 1) {
-                menuOpcao = (menuOpcao + 2) % 3;
+                if (menuOpcao == 0) {
+                    menuOpcao = 2;
+                } else {
+                    menuOpcao--;
+                }
             }
 
             if (IsKeyPressed(KEY_ENTER) == 1) {
@@ -436,54 +438,54 @@ void TelaLoja(Personagem *personagem) {
                 sairLojaDaLoja = true;
             }
         }
-
         BeginDrawing();
         ClearBackground(BLACK);
 
-        Texture2D texParaDesenhar;
+        Texture2D TexturaParaDesenhar;
         if (estado == estadoMenu) {
             if (menuOpcao == comprar) {
-                texParaDesenhar = texComprar;
+                TexturaParaDesenhar = texComprar;
             } else if (menuOpcao == conversar) {
-                texParaDesenhar = texConversar;
+                TexturaParaDesenhar = texConversar;
             } else {
-                texParaDesenhar = texsairLoja;
+                TexturaParaDesenhar = texsairLoja;
             }
         } else if (estado == estadoCompra) {
             if (itemOpcao == vida) {
-                texParaDesenhar = texCompraItem0;
+                TexturaParaDesenhar = texCompraItem0;
             } else if (itemOpcao == mais2) {
-                texParaDesenhar = texCompraItem1;
+                TexturaParaDesenhar = texCompraItem1;
             } else if (itemOpcao == menos2) {
-                texParaDesenhar = texCompraItem2;
+                TexturaParaDesenhar = texCompraItem2;
             } else if (itemOpcao == mais4) {
-                texParaDesenhar = texCompraItem3;
+                TexturaParaDesenhar = texCompraItem3;
             } else {
-                texParaDesenhar = texCompraItem4;
+                TexturaParaDesenhar = texCompraItem4;
             }
         } else {
             if (paginaDialogo == 0) {
-                texParaDesenhar = texDialogo1;
+                TexturaParaDesenhar = texDialogo1;
             } else {
-                texParaDesenhar = texDialogo2;
+                TexturaParaDesenhar = texDialogo2;
             }
         }
 
-        Rectangle source;
-        Rectangle dest;
+        Rectangle original;
+        Rectangle destino;
         Vector2 origem;
-        source.x = 0.0f;
-        source.y = 0.0f;
-        source.width = (float)texParaDesenhar.width;
-        source.height = (float)texParaDesenhar.height;
-        dest.x = 0.0f;
-        dest.y = 0.0f;
-        dest.width = (float)GetScreenWidth();
-        dest.height = (float)GetScreenHeight();
+
+        original.x = 0.0f;
+        original.y = 0.0f;
+        original.width = TexturaParaDesenhar.width;
+        original.height = TexturaParaDesenhar.height;
+        destino.x = 0.0f;
+        destino.y = 0.0f;
+        destino.width = GetScreenWidth();
+        destino.height = GetScreenHeight();
         origem.x = 0.0f;
         origem.y = 0.0f;
 
-        DrawTexturePro(texParaDesenhar, source, dest, origem, 0.0f, WHITE);
+        DrawTexturePro(TexturaParaDesenhar, original, destino, origem, 0.0f, WHITE);
 
         if (estado == estadoConversa && paginaDialogo == 1) {
             DrawText(TextFormat("%d", max_dinheiro_gasto_ultima_run), 220, 330, 40,WHITE);
