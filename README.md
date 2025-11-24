@@ -34,7 +34,24 @@ O Makefile já configura automaticamente:
 ✔ Alvo `deps` para instalação de dependências  
 
 ---
+🎮 Controles do Jogo
+Menu Inicial
 
+↓ / S → próximo item
+
+↑ / W → item anterior
+
+Enter → abre a opção selecionada
+
+Tela de Opções
+
+→ / D → aumenta a dificuldade
+
+← / A → reduz a dificuldade
+
+Esc / Enter → retorna ao menu
+
+---
 <h2 id="participantes">👨‍👩‍👧‍👦 Participantes</h2>
 
 | <img src="https://avatars.githubusercontent.com/u/107767224?v=4" width="120" height="120"> | <img src="https://avatars.githubusercontent.com/u/200817151?v=4" width="120" height="120"> | <img src="https://avatars.githubusercontent.com/u/211526755?v=4" width="120" height="120"> |
