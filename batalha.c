@@ -124,14 +124,32 @@ void desenhar_hud_basica(void) {
     total_dealer_visivel = total_dealer;
 
     if (game_state == estado_player) {
-        if (dealer_hand.quant > 0) {
-            Carta *primeira;
-            int valor_primeira;
-            primeira = dealer_hand.cartas[0];
-            if (primeira != NULL) {
-                valor_primeira = valor_carta(primeira);
-                total_dealer_visivel = total_dealer - valor_primeira;
+        int total_visivel;
+        int quant_as_visivel;
+        total_visivel = 0;
+        quant_as_visivel = 0;
+
+        if (dealer_hand.quant > 1) {
+            for (int i = 1; i < dealer_hand.quant; i++) {
+                Carta *cart4 = dealer_hand.cartas[i];
+                int val = cart4->valor;
+
+                if (val == 1) {
+                    quant_as_visivel++;
+                    total_visivel++;
+                } else {
+                    total_visivel = total_visivel + valor_carta(cart4);
+                }
             }
+
+            if (quant_as_visivel > 0) {
+                if (total_visivel + 10 <= 21) {
+                    total_visivel = total_visivel + 10;
+                }
+            }
+            total_dealer_visivel = total_visivel + trinket_bonus_dealer;
+        } else {
+            total_dealer_visivel = 0;
         }
     }
     DrawText(TextFormat("Player: %d", total_player), 40, 680, 26, RAYWHITE);
