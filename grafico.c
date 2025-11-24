@@ -932,12 +932,12 @@ int hitboxes_fugir_batalha(int *opcao_pos_vitoria) {
     hitbox_continuar.x = 750.0f;
     hitbox_continuar.y = 275.0f;
     hitbox_continuar.width = 300.0f;
-    hitbox_continuar.height = 45.0f;
+    hitbox_continuar.height = 55.0f;
 
     hitbox_sair.x = 750.0f;
     hitbox_sair.y = 370.0f;
     hitbox_sair.width = 300.0f;
-    hitbox_sair.height = 45.0f;
+    hitbox_sair.height = 55.0f;
 
     mouse_pos = GetMousePosition();
     mouse_continuar = 0;
