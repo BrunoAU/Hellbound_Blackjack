@@ -54,7 +54,6 @@ void reiniciar_fases(void) {
     }
 
     fase_atual = fase_head;
-    prompt_fugir_ou_n = 0;
     venceu_todas = 0;
     rodada_travada = 0.0;
 }
