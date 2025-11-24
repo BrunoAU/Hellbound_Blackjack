@@ -578,6 +578,8 @@ void TelaBatalha(Personagem personagem) {
     if (voltar_menu == 1) {
         reiniciar_fases();
         destruir_fases(fase_head);
+        fase_head = NULL;
+        fase_atual = NULL;
         dinheiro_total = 0;
         trinket_mais2_count = 0;
         trinket_menos2_count = 0;
