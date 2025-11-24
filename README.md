@@ -17,7 +17,7 @@ O projeto foi estruturado para compilar automaticamente em **Windows, Linux e ma
 - [📜 Licença](#-licença)
 
 ---
-# 🎮 **Visão Geral**
+# **Visão Geral**
 
 O projeto utiliza:
 
@@ -34,7 +34,7 @@ O Makefile já configura automaticamente:
 ✔ Alvo `deps` para instalação de dependências  
 
 ---
-🎮 Controles do Jogo
+# 🎮 **Controles do Jogo**
 Menu Inicial
 
 ↓ / S → próximo item
