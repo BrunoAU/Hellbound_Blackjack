@@ -1,60 +1,141 @@
-# 🔥 **Hellbound: BlackJack**
-Um jogo de Blackjack com estética sombria e estilizada, desenvolvido em **C** utilizando a biblioteca gráfica **raylib**.  
-O projeto foi estruturado para compilar automaticamente em **Windows, Linux e macOS** usando um único **Makefile inteligente**, que ajusta as flags conforme o sistema operacional.
+<img width="1273" height="442" alt="image" src="https://github.com/user-attachments/assets/4af3b27b-b43d-4d67-9659-aab713e57786" />
+
+
+
+**Hellbound Blackjack** é um jogo de cartas com um estética sombria em pixelart com grandes inspirações em "Resident Evil" e "Fear & Hunger: TORMENTA", desenvolvido em **C** utilizando a biblioteca gráfica **raylib**, se aventure em um jogo de cartas complexo e bem estruturado e tente sobreviver.  
 
 ---
 
 # 📑 **Índice**
 
 - [🎮 Visão Geral](#-visão-geral)  
-- [🛠️ Pré-requisitos:](#️-pré-requisitos)  
-  - [Windows](#windows-msys2--mingw-w64)  
-  - [Linux](#linux-ubuntudebian-e-similares)  
-  - [macOS](#macos-intel-e-apple-silicon)  
+- [🛠️ Pré-requisitos](#️-pré-requisitos)  
+  - [Windows](#-windows)  
+  - [Linux](#-linux)  
+  - [macOS](#-macos)  
 - [🏗️ Uso do Makefile](#️-uso-do-makefile)  
 - [🎮 Controles do Jogo](#-controles-do-jogo)  
-- [📷 Participantes](#-participantes)  
-- [📜 Licença](#-licença)
+- [📷 Participantes](#participantes)  
 
 ---
-# **Visão Geral**
 
-O projeto utiliza:
 
-- **Linguagem C (C99)**
-- **raylib**
-- **make**
-- **gcc ou clang**, dependendo do sistema
+# 🎮 **Visão Geral**
+<img width="1270" height="69" alt="image" src="https://github.com/user-attachments/assets/8be431e5-013e-4b01-ae11-885a5d66b5ae" />
 
-O Makefile já configura automaticamente:
+O projeto foi construído com uma combinação leve e poderosa de ferramentas:
 
-✔ Detecção do sistema operacional  
-✔ Configuração de includes e bibliotecas  
-✔ Linkagem correta para Windows, Linux e macOS  
-✔ Alvo `deps` para instalação de dependências  
+- 🧠 Linguagem C
+- 🎨 raylib 
+- 🛠️ make 
+- 🧩 gcc / clang 
 
 ---
+
+# 🛠️ **Pré-requisitos**
+
+## 🪟 **Windows**
+
+1. Instale o **MSYS2**  
+2. No terminal *MSYS2 MinGW 64-bit* execute:
+```bash
+pacman -Syu
+pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-make
+pacman -S mingw-w64-x86_64-raylib
+```
+
+3. Compile usando:
+
+```bash
+mingw32-make
+```
+
+---
+
+## 🐧 **Linux**
+
+Instale as dependências:
+
+```bash
+sudo apt update
+sudo apt install build-essential make gcc libraylib-dev
+```
+
+Compile com:
+
+```bash
+make
+```
+
+---
+
+## 🍎 **macOS**
+
+Instale:
+
+```bash
+brew install raylib
+```
+
+Compile:
+
+```bash
+make
+```
+
+---
+
+# 🏗️ **Uso do Makefile**
+
+### 🔹 Compilar o projeto
+
+```bash
+make
+```
+
+### 🔹 Executar o jogo
+
+```bash
+make run
+```
+
+### 🔹 Limpar arquivos de build
+
+```bash
+make clean
+```
+
+### 🔹 Instalar dependências automaticamente (quando suportado)
+
+```bash
+make deps
+```
+
+---
+
 # 🎮 **Controles do Jogo**
-Menu Inicial
 
-↓ / S → próximo item
+### **Menu Inicial**
 
-↑ / W → item anterior
+- ↓ / S → próximo item  
+- ↑ / W → item anterior  
+- **Enter** → confirma  
 
-Enter → abre a opção selecionada
+### **Tela de Opções**
 
-Tela de Opções
-
-→ / D → aumenta a dificuldade
-
-← / A → reduz a dificuldade
-
-Esc / Enter → retorna ao menu
+- → / D → aumenta a dificuldade  
+- ← / A → reduz a dificuldade  
+- **Esc / Enter** → volta  
 
 ---
-<h2 id="participantes">👨‍👩‍👧‍👦 Participantes</h2>
+
+# 👨‍👩‍👧‍👦 **Participantes** <h2 id="participantes"></h2>
 
 | <img src="https://avatars.githubusercontent.com/u/107767224?v=4" width="120" height="120"> | <img src="https://avatars.githubusercontent.com/u/200817151?v=4" width="120" height="120"> | <img src="https://avatars.githubusercontent.com/u/211526755?v=4" width="120" height="120"> |
 |---------------------------------|---------------------------------|---------------------------------|
 | **Igor Gabriel** | **Bruno Augusto** | **Gustavo Torres** |
-| XXX | XXX | XXX |
+| Desenvolvedor • Designer | Desenvolvedor | Desenvolvedor |
+
+
+---
+
