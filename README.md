@@ -134,7 +134,7 @@ make deps
 | <img src="https://avatars.githubusercontent.com/u/107767224?v=4" width="120" height="120"> | <img src="https://avatars.githubusercontent.com/u/200817151?v=4" width="120" height="120"> | <img src="https://avatars.githubusercontent.com/u/211526755?v=4" width="120" height="120"> |
 |---------------------------------|---------------------------------|---------------------------------|
 | **Igor Gabriel** | **Bruno Augusto** | **Gustavo Torres** |
-| Desenvolvedor • Designer | Desenvolvedor | Desenvolvedor |
+| Desenvolvedor • Artista | Desenvolvedor | Desenvolvedor |
 
 
 ---
