@@ -18,6 +18,9 @@ int main(void) {
     InitWindow(1920, 1080, "Hellbound: Black Jack");
     SetExitKey(KEY_NULL);
     SetTargetFPS(60);
+    if (IsWindowFullscreen() == 0) {
+        ToggleFullscreen();
+    }
 
     Texture2D TexturaStart = LoadTexture("assets/tela_de_titulo_start.png");
     Texture2D TexturaOptions = LoadTexture("assets/tela_de_titulo_opcoes.png");
