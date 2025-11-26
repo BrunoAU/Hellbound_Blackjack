@@ -76,13 +76,6 @@ void hand_clear(Hand *hand) {
     }
 }
 
-char *valor_label(int v) {
-    if (v >= 1 && v <= 13) {
-        return valor_labels[v - 1];
-    }
-    return "?";
-}
-
 int valor_carta(Carta *cart4) {
     if (cart4 == NULL) {
         return 0;
