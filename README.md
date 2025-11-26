@@ -6,7 +6,8 @@
 
 # 📑 **Seções**
 
-- [🎮 Visão Geral](#visão-geral)  
+- [🎮 Visão Geral](#visão-geral)
+- [🎥 Vídeo de Demonstração](#vídeo-de-demonstração)  
 - [🕹️ Itch.io](#itchio)  
   - [Windows](#itch-windows)  
   - [Linux](#itch-linux)  
@@ -30,6 +31,14 @@ O projeto foi construído com uma combinação leve e poderosa de ferramentas:
 - raylib 
 - make 
 - gcc / clang 
+
+---
+
+# 🎥 **Vídeo de Demonstração** <a id="vídeo-de-demonstração"></a>
+
+Assista abaixo a uma demonstração rápida do **Hellbound Blackjack** em execução:
+
+[![Clique para assistir ao vídeo no YouTube](https://img.youtube.com/vi/XL6lsjvSiyY/hqdefault.jpg)](https://youtu.be/XL6lsjvSiyY)
 
 ---
 
