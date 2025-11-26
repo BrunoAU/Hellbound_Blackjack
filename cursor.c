@@ -44,8 +44,8 @@ void clickCursor(bool novoEstado) {
 
 void desenharCursor(void) {
     Vector2 mouse;
-    float mouseLargura;
-    float mouseAltura;
+    float mouse_largura;
+    float mouse_altura;
     Rectangle original;
     Rectangle destino;
     Vector2 origem;
@@ -62,12 +62,19 @@ void desenharCursor(void) {
     }
 
     mouse = GetMousePosition();
-    mouseLargura = (float)textura.width * escalaCursor;
-    mouseAltura = (float)textura.height * escalaCursor;
+    mouse_largura = textura.width * escalaCursor;
+    mouse_altura = textura.height * escalaCursor;
 
-    original = (Rectangle){0.0f, 0.0f, (float)textura.width, (float)textura.height};
-    destino = (Rectangle){mouse.x, mouse.y, mouseLargura, mouseAltura};
-    origem = (Vector2){mouseLargura * ajusteCursorX, mouseAltura * ajusteCursorY};
+    original.x = 0.0f;
+    original.y = 0.0f;
+    original.width = textura.width;
+    original.height = textura.height;
+    destino.x = mouse.x;
+    destino.y = mouse.y;
+    destino.width = mouse_largura;
+    destino.height = mouse_altura;
+    origem.x = mouse_largura * ajusteCursorX;
+    origem.y = mouse_altura * ajusteCursorY;
 
     DrawTexturePro(textura, original, destino, origem, 0.0f, WHITE);
 }
