@@ -15,12 +15,13 @@ int dificuldade = 5;
 int voltar_menu = 0;
 
 int main(void) {
+    SetConfigFlags(FLAG_WINDOW_HIGHDPI);
     InitWindow(1920, 1080, "Hellbound: Black Jack");
-    SetExitKey(KEY_NULL);
-    SetTargetFPS(60);
     if (IsWindowFullscreen() == 0) {
         ToggleFullscreen();
     }
+    SetTargetFPS(60);
+    SetExitKey(KEY_NULL);
 
     Texture2D TexturaStart = LoadTexture("assets/tela_de_titulo_start.png");
     Texture2D TexturaOptions = LoadTexture("assets/tela_de_titulo_opcoes.png");
@@ -36,7 +37,6 @@ int main(void) {
     while (WindowShouldClose() == 0 && Tela != TelaExit) {
         if (Tela == TelaMenu) {
             HideCursor();
-
             if (IsKeyPressed(KEY_DOWN) || IsKeyPressed(KEY_S)) {
                 MenuOpcaoAtual++;
                 if (MenuOpcaoAtual > 2) {
@@ -49,6 +49,7 @@ int main(void) {
                     MenuOpcaoAtual = 2;
                 }
             }
+
             if (IsKeyPressed(KEY_ENTER)) {
                 if (MenuOpcaoAtual == OpcaoStart) {
                     UnloadTexture(TexturaStart);
