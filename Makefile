@@ -15,7 +15,7 @@ else
 	UNAME_S := $(shell uname -s)
 
 	ifeq ($(UNAME_S),Linux)
-		RAYLIB_ROOT = /home/gusta/dev_libs/raylib
+		RAYLIB_ROOT = $(HOME)/dev_libs/raylib
 		
 		CFLAGS = -I$(RAYLIB_ROOT)/src
 
