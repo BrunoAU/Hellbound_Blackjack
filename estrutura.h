@@ -29,7 +29,6 @@ Carta *puxar_carta(void);
 Carta *puxar_para_mao(Hand *hand);
 void hand_clear(Hand *hand);
 
-char *valor_label(int v);
 int valor_carta(Carta *cart4);
 int valor_com_as(Hand *hand, int *tem_as_11_1);
 
