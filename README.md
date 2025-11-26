@@ -44,12 +44,18 @@ Assista abaixo a uma demonstração rápida do **Hellbound Blackjack** em execu�
 
 # 🕹️ **Itch.io** <h2 id="itchio"></h2>
 
-Nosso jogo está disponível para download no itch.io: https://gustavotorrescastro.itch.io/hellbound-blackjack
+Nosso jogo também está disponível para download no itch.io:  
+https://gustavotorrescastro.itch.io/hellbound-blackjack
 
-Selecione o Sistema operacional desejado, baixe, extraia a pasta e acesse o readme presente nela para o resto
-das instruções de instalação.
+Você pode baixar um pacote já compilado para o seu sistema operacional, porém **ele ainda depende da instalação da raylib e das bibliotecas descritas na seção de [🛠️ Pré-requisitos](#pré-requisitos)**.
 
-Abaixo estão as instruções completas para rodar o **Hellbound Blackjack** a partir da versão distribuída no **itch.io**, já compilada e pronta para uso em cada sistema operacional.
+> ⚠️ **Importante:** antes de tentar executar o jogo baixado pelo itch.io (em qualquer sistema),  
+> certifique-se de que você seguiu a seção de **Pré-requisitos** correspondente ao seu sistema operacional:
+> - [Windows](#windows)  
+> - [Linux](#linux)  
+> - [macOS](#macos)  
+
+Após instalar a raylib e as dependências, utilize as instruções abaixo para rodar o executável baixado do itch.io em cada plataforma.
 
 ---
 
@@ -57,36 +63,41 @@ Abaixo estão as instruções completas para rodar o **Hellbound Blackjack** a p
 
 Bem-vindo ao Hellbound Blackjack!
 
-Este é um jogo de cartas com rpg desenvolvido usando a biblioteca Raylib.
+Este é um jogo de cartas com RPG desenvolvido usando a biblioteca Raylib.
 
-### COMO JOGAR
+> ✅ **Antes de começar:** se você ainda não instalou a raylib e o ambiente no Windows,  
+> siga primeiro a seção [🛠️ Pré-requisitos → Windows](#windows).
 
-1.  **Extrair:** Descompacte (extraia) o arquivo ZIP que você baixou.
-2.  **Abrir:** Entre na pasta extraída (que deve conter o `jogo.exe` e algumas DLLs).
-3.  **Executar:** Dê dois cliques no arquivo **jogo.exe** para iniciar.
+### COMO JOGAR (itch.io)
+
+1. **Baixar:** Acesse a página do jogo no itch.io e baixe o arquivo ZIP para Windows.  
+2. **Extrair:** Descompacte (extraia) o arquivo ZIP que você baixou.  
+3. **Abrir pasta:** Entre na pasta extraída (que deve conter o `jogo.exe` e algumas DLLs).  
+4. **Executar:** Dê dois cliques no arquivo **`jogo.exe`** para iniciar.
 
 ### AVISO IMPORTANTE (SmartScreen)
 
-Se esta for a primeira vez que você executa o jogo, o Windows pode exibir uma tela azul chamada **"O Windows protegeu o computador"**.
+Na primeira execução, o Windows pode exibir a tela **"O Windows protegeu o computador"**.
 
-Isso acontece porque o aplicativo é um software independente e ainda não é reconhecido pelo SmartScreen da Microsoft.
+Isso acontece porque o aplicativo não é assinado digitalmente e ainda não é conhecido pelo SmartScreen da Microsoft.
 
-**Para prosseguir, basta clicar em:**
+Para prosseguir:
 
-1.  **"Mais informações"**
-2.  **"Executar assim mesmo"**
+1. Clique em **"Mais informações"**  
+2. Clique em **"Executar assim mesmo"**
 
-O jogo é seguro!
+O jogo é seguro.
 
 ### REQUISITOS DO SISTEMA
 
-* **Sistema Operacional:** Windows 7 ou superior (testado em Windows 10/11)
-* (Opcional) Placa de vídeo compatível com **OpenGL**
+- **Sistema Operacional:** Windows 7 ou superior (testado em Windows 10/11)  
+- Placa de vídeo compatível com **OpenGL**  
+- Raylib instalada conforme [Pré-requisitos → Windows](#windows)
 
 ### CRÉDITOS
 
-* **Desenvolvimento e Código:** Gustavo Torres Castro, Bruno Augusto da Rocha Leite Filho e Igor Gabriel Dutra e Silva
-* **Motor:** Raylib
+- **Desenvolvimento e Código:** Gustavo Torres Castro, Bruno Augusto da Rocha Leite Filho e Igor Gabriel Dutra e Silva  
+- **Motor:** Raylib  
 
 ---
 
@@ -94,38 +105,46 @@ O jogo é seguro!
 
 Bem-vindo ao Hellbound Blackjack!
 
-Este é um jogo de cartas com rpg desenvolvido usando a biblioteca Raylib.
+Este é um jogo de cartas com RPG desenvolvido usando a biblioteca Raylib.
 
-### 🕹️ COMO JOGAR
+> ✅ **Antes de começar:** siga a seção [🛠️ Pré-requisitos → Linux](#linux)  
+> para instalar a raylib e as bibliotecas necessárias (OpenGL, X11, etc.).
 
-1.  **Extrair:** Descompacte (extraia) o arquivo ZIP/tar.gz que você baixou.
-2.  **Tornar Executável (Método Gráfico):**
-    * Clique com o **botão direito** no arquivo executável do jogo (que se chama **jogo**).
-    * Vá em **Propriedades** > **Permissões**.
-    * Marque a caixa **"Permitir execução do arquivo como um programa"** (ou similar).
-3.  **Executar:** Dê dois cliques no arquivo executável para iniciar.
+### 🕹️ COMO JOGAR (itch.io)
 
-#### Opção Alternativa (Usando o Terminal)
+1. **Baixar:** Acesse a página do jogo no itch.io e baixe o arquivo **ZIP/tar.gz** para Linux.  
+2. **Extrair:** Descompacte o arquivo que você baixou.  
+3. **Tornar Executável (método gráfico):**
+   - Clique com o **botão direito** no arquivo do jogo (geralmente chamado **`jogo`**).  
+   - Vá em **Propriedades → Permissões**.  
+   - Marque **"Permitir execução do arquivo como um programa"** (ou similar).  
+4. **Executar:** Dê dois cliques no arquivo executável para iniciar.
 
-1.  Abra o Terminal na pasta onde você extraiu o jogo.
-2.  Use o comando para dar permissão de execução:
-    ```bash
-    chmod +x jogo
-    ```
-3.  Execute o jogo com o seguinte comando:
-    ```bash
-    ./jogo
-    ```
+#### Opção alternativa (Terminal)
+
+1. Abra um terminal na pasta onde você extraiu o jogo.  
+2. Dê permissão de execução:
+   ```bash
+   chmod +x jogo
+   ```
+3. Execute o jogo:
+   ```bash
+   ./jogo
+   ```
 
 ### ⚙️ REQUISITOS DO SISTEMA
 
-* **Sistema Operacional:** Qualquer distribuição Linux moderna (Ubuntu, Fedora, Arch, etc.).
-* **Dependências:** Seu sistema precisa ter as bibliotecas padrões do C/C++ (libstdc++) e, possivelmente, as bibliotecas **X11** e **OpenGL** instaladas para a Raylib funcionar.
+- **Sistema Operacional:** Distribuição Linux moderna (Ubuntu, Fedora, Arch, etc.)  
+- Bibliotecas instaladas conforme [Pré-requisitos → Linux](#linux), incluindo:
+  - **raylib**
+  - **OpenGL**
+  - **X11**
+  - **libstdc++** e demais dependências de build/runtime
 
 ### 📝 CRÉDITOS
 
-* **Desenvolvimento e Código:** Gustavo Torres Castro, Bruno Augusto da Rocha Leite Filho e Igor Gabriel Dutra e Silva
-* **Motor:** Raylib
+- **Desenvolvimento e Código:** Gustavo Torres Castro, Bruno Augusto da Rocha Leite Filho e Igor Gabriel Dutra e Silva  
+- **Motor:** Raylib  
 
 ---
 
@@ -133,28 +152,34 @@ Este é um jogo de cartas com rpg desenvolvido usando a biblioteca Raylib.
 
 Bem-vindo ao Hellbound Blackjack!
 
-Este é um jogo de cartas com rpg desenvolvido usando a biblioteca Raylib.
+Este é um jogo de cartas com RPG desenvolvido usando a biblioteca Raylib.
 
-### 🕹️ COMO JOGAR
+> ✅ **Antes de começar:** siga a seção [🛠️ Pré-requisitos → macOS](#macos)  
+> para instalar a raylib via Homebrew e configurar o seu ambiente.
 
-1.  **Extrair:** Descompacte (extraia) o arquivo ZIP/tar.gz que você baixou.
-2.  **Copiar:** Arraste o arquivo **jogo** para a sua pasta **Aplicativos** (Applications).
-3.  **Executar (Primeira Vez):**
-    * Clique no ícone do jogo com o **botão direito** (ou Control + Clique).
-    * Selecione **"Abrir"** no menu.
-    * Na janela de aviso de segurança, clique em **"Abrir"** novamente.
+### 🕹️ COMO JOGAR (itch.io)
 
-**⚠️ Nota:** Esta etapa de "clique direito > Abrir" é necessária apenas na primeira execução, pois o macOS não reconhece o desenvolvedor. Depois disso, basta dar dois cliques normalmente.
+1. **Baixar:** Acesse a página do jogo no itch.io e baixe o pacote para macOS (ZIP/tar.gz).  
+2. **Extrair:** Descompacte o arquivo que você baixou.  
+3. **Mover:** Arraste o executável **`jogo`** (ou o app gerado) para a pasta **Aplicativos (Applications)** ou para qualquer pasta de sua preferência.  
+4. **Executar pela primeira vez:**
+   - Clique com o **botão direito** (ou `Control + clique`) no ícone do jogo.  
+   - Selecione **"Abrir"**.  
+   - Na caixa de aviso de segurança do macOS, clique em **"Abrir"** novamente.
+
+> 🔐 Essa etapa de “clique direito → Abrir” só é necessária na primeira vez,  
+> pois o macOS não reconhece o desenvolvedor. Depois disso, basta dar dois cliques normalmente.
 
 ### ⚙️ REQUISITOS DO SISTEMA
 
-* **Sistema Operacional:** macOS 10.9 (Mavericks) ou superior.
-* (Opcional) Placa de vídeo compatível com **OpenGL**
+- **Sistema Operacional:** macOS 10.9 (Mavericks) ou superior  
+- Raylib instalada conforme [Pré-requisitos → macOS](#macos)  
+- Suporte a **OpenGL** habilitado no sistema
 
 ### 📝 CRÉDITOS
 
-* **Desenvolvimento e Código:** Gustavo Torres Castro, Bruno Augusto da Rocha Leite Filho e Igor Gabriel Dutra e Silva
-* **Motor:** Raylib
+- **Desenvolvimento e Código:** Gustavo Torres Castro, Bruno Augusto da Rocha Leite Filho e Igor Gabriel Dutra da Silva  
+- **Motor:** Raylib
 
 ---
 
