@@ -15,7 +15,6 @@ int dificuldade = 5;
 int voltar_menu = 0;
 
 int main(void) {
-    SetConfigFlags(FLAG_WINDOW_HIGHDPI);
     InitWindow(1920, 1080, "Hellbound: Black Jack");
     if (IsWindowFullscreen() == 0) {
         ToggleFullscreen();
