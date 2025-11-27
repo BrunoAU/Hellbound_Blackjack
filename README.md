@@ -161,14 +161,25 @@ Este é um jogo de cartas com RPG desenvolvido usando a biblioteca Raylib.
 
 1. **Baixar:** Acesse a página do jogo no itch.io e baixe o pacote para macOS (ZIP/tar.gz).  
 2. **Extrair:** Descompacte o arquivo que você baixou.  
-3. **Mover:** Arraste o executável **`jogo`** (ou o app gerado) para a pasta **Aplicativos (Applications)** ou para qualquer pasta de sua preferência.  
-4. **Executar pela primeira vez:**
-   - Clique com o **botão direito** (ou `Control + clique`) no ícone do jogo.  
-   - Selecione **"Abrir"**.  
-   - Na caixa de aviso de segurança do macOS, clique em **"Abrir"** novamente.
+3. **Mover:** Arraste o executável **`Hellbound`** (ou o app gerado) para a pasta **Aplicativos (Applications)** ou para qualquer pasta de sua preferência.
+4. Clique 2 vezes no ícone do jogo para abrí-lo.
 
-> 🔐 Essa etapa de “clique direito → Abrir” só é necessária na primeira vez,  
-> pois o macOS não reconhece o desenvolvedor. Depois disso, basta dar dois cliques normalmente.
+### AVISO IMPORTANTE
+
+Na primeira execução, o Mac pode dar o aviso **"O item Hellbound (ou o nome do app gerado) não foi aberto"**.
+
+Para prosseguir:
+
+1. Clique no ícone de interrogação na parte superior do aviso, ele irá lhe redirecionar para uma página específica do Manual de Uso do Mac.
+2. Clique em "Abra o ajuste 'Privacidade e Segurança' para mim".
+3. Role até a aba "Segurança" na tela que abrirá após o clique anterior.
+4. Você verá um aviso "O item Hellbound (ou o nome do app gerado) foi bloqueado para proteger o Mac", e ao lado dele um botão "Abrir Mesmo Assim", clique nele.
+5. Outro aviso surgirá em sua tela "Abrir O item Hellbound (ou o nome do app gerado)?".
+6. Clique em "Abrir mesmo assim".
+
+O jogo é seguro.
+
+> 🔐 Essa etapa só é necessária na primeira vez, pois o macOS não reconhece o desenvolvedor. Depois disso, basta dar dois cliques normalmente.
 
 ### ⚙️ REQUISITOS DO SISTEMA
 
@@ -258,7 +269,7 @@ make
 ## **macOS**
 
 1. Instale o **Homebrew** (se ainda não tiver).  
-2. No terminal, instale a **raylib**:
+2. No terminal, instale a **raylib** com os seguintes comandos:
 
 ```bash
 brew update
